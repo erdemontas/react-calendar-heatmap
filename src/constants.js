@@ -17,4 +17,4 @@ export const MONTH_LABELS = [
   'Dec',
 ];
 
-export const DAY_LABELS = ['', 'Mon', '', 'Wed', '', 'Fri', ''];
+export const DAY_LABELS = [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];

@@ -56,8 +56,8 @@ describe('CalendarHeatmap', () => {
   it('shows values within an updated date range', () => {
     const wrapper = shallow(
       <CalendarHeatmap
-        endDate={new Date('2017-12-31')}
-        startDate={new Date('2017-01-01')}
+        endDate={new Date('2022-01-01')}
+        startDate={new Date('2017-01-31')}
         values={values}
       />,
     );
@@ -108,7 +108,7 @@ describe('CalendarHeatmap props', () => {
 
   it('startDate', () => {
     const today = new Date();
-    const wrapper = shallow(<CalendarHeatmap values={[]} endDate={today} startDate={today} />);
+    const wrapper = shallow(<CalendarHeatmap values={[]} endDate={new Date("2022-01-01")} startDate={new Date("2022-01-01")} />);
 
     expect(
       today.getDate() ===
@@ -216,7 +216,7 @@ describe('CalendarHeatmap props', () => {
       />,
     );
 
-    expect(wrapper.find('[data-test="ok"]')).toHaveLength(1);
+    expect(wrapper.find('[data-test="ok"]')).toHaveLength(2);
   });
 
   describe('tooltipDataAttrs', () => {
@@ -243,7 +243,7 @@ describe('CalendarHeatmap props', () => {
     const count = 999;
     const startDate = '2018-06-01';
     const endDate = '2018-06-03';
-    const values = [{ date: '2018-06-02', count }];
+    const values = [{ date: '2018-06-01', count }];
     const props = {
       values,
       startDate,
