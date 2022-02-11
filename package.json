@@ -28,7 +28,7 @@
     "clean": "rimraf dist",
     "format": "prettier --write 'src/**/*' 'demo/src/**/*'",
     "lint": "eslint src",
-    "prepare": "npm-run-all clean build",
+    "prepare": "npm-run build",
     "test": "jest --config jest.config.js --coverage",
     "test:watch": "jest --config jest.config.js --watch",
     "start": "npm-run-all --parallel start:js start:css",
@@ -36,7 +36,7 @@
     "start:js": "cross-env NODE_ENV=development rollup -c -w"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.2"
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
   },
   "dependencies": {
     "memoize-one": "^5.0.0",
